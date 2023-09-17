@@ -127,7 +127,7 @@ train_dataset = tf.data.Dataset.from_generator(
     )
 )
 
-model.fit(train_dataset, batch_size=batch_size, steps_per_epoch=1, epochs=1)
+model.fit(train_dataset, batch_size=batch_size, steps_per_epoch=30000, epochs=1)
 
 score = model.evaluate(x_test_transformed, y_test, verbose=0)
 print("Test loss:", score[0])
