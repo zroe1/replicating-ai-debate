@@ -1,3 +1,22 @@
+'''
+Code to train the six pixel model in order to replicate "AI safety via debate" 
+by Geoffrey Irving, Paul Christiano, and Dario Amodei. For more information,
+the original paper can be found at:
+    https://arxiv.org/abs/1805.00899
+
+Much of the code in this document, expect for model architecture was taken
+from:
+    https://keras.io/examples/vision/mnist_convnet/
+(Licensed under Apache License Version 2.0)
+Details: The original code was modified to accommodate the different input shape,
+training details, and model architecture. Additional data processing of the
+MNIST dataset was also added.
+
+The architecture for this model was taken from the TensorFlow documentation:
+    https://www.tensorflow.org/tutorials/quickstart/advanced
+(Licensed under Apache License Version 2.0)
+'''
+
 from tensorflow import keras
 from tensorflow.keras import layers
 from tensorflow.keras.optimizers import Adam
