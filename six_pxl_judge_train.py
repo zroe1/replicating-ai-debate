@@ -6,6 +6,10 @@ import tensorflow as tf
 import numpy as np
 import random
 
+# NOTE: Change the following list to modify the locations and formats of the
+# saved models
+PATHS_FOR_SAVED_MODELS = ['model_weights.h5', 'model_weights.keras']
+
 def pick_random_non_zero_pixels(img, num_pixels):
   """
   Picks random non-zero pixel locations from the given image.
@@ -123,8 +127,12 @@ train_dataset = tf.data.Dataset.from_generator(
     )
 )
 
-model.fit(train_dataset, batch_size=batch_size, steps_per_epoch=30000, epochs=1)
+model.fit(train_dataset, batch_size=batch_size, steps_per_epoch=1, epochs=1)
 
 score = model.evaluate(x_test_transformed, y_test, verbose=0)
 print("Test loss:", score[0])
 print("Test accuracy:", score[1])
+
+
+for path in PATHS_FOR_SAVED_MODELS:
+    model.save_weights(path)
