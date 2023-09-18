@@ -10,7 +10,7 @@ python3 judge_train.py --num_pixels 6
 ```
 To train the 4 pixel model run:
 ```
-python3 judge_train.py --num_pixels 6
+python3 judge_train.py --num_pixels 4
 ```
 
 ### Six pixel judge model:
