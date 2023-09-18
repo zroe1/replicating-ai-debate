@@ -15,7 +15,7 @@ python3 judge_train.py --num_pixels 4
 
 ### Six pixel judge model:
 
-<b>Name: </b>six_pxl_model.h5  
+<b>Name: </b>six_pxl_judge.h5  
 <b>Accuracy: </b> 58.3%  
 <b>Notes: </b>The model was trained with 30,000 batches of 128 samples with Adam (learning rate = 10<sup>-4</sup>) as was done in the original paper. While the model in the paper had an accuracy of 59.4%, the model in this repository only achieves 58.3%. This could be for one of two reasons:  
 
